@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DPDP Pre-Audit Website Scanner for Compliance Professionals</title>
+    <title>DPDP Pre-Audit Website Scanner for Auditors | Audit Readiness Tool</title>
+    <meta name="description" content="A DPDP pre-audit website review tool for auditors and compliance professionals. Identify DPDP and privacy gaps on public websites before formal audits.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arshmakker.github.io/dpdp-preaudit-scanner/">
     <style>
         * {
             margin: 0;
@@ -97,6 +100,15 @@
             margin-right: auto;
         }
 
+        .hero .credibility {
+            font-size: 0.875rem;
+            color: #888;
+            margin-top: 16px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         .cta-button {
             display: inline-block;
             padding: 14px 36px;
@@ -177,6 +189,24 @@
 
         .workflow-container {
             counter-reset: step-counter;
+        }
+
+        .plainness-section {
+            background-color: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            padding: 32px;
+            margin-top: 32px;
+        }
+
+        .plainness-section h2 {
+            font-size: 1.125rem;
+            margin-bottom: 16px;
+        }
+
+        .plainness-section p {
+            font-size: 0.95rem;
+            color: #555;
         }
 
         em {
@@ -310,191 +340,210 @@
             .bordered-section {
                 padding: 24px;
             }
+
+            .plainness-section {
+                padding: 24px;
+            }
         }
     </style>
 </head>
 <body>
-    <section class="hero">
-        <div class="container">
-            <h1>DPDP Pre-Audit Website Scanner for Compliance Professionals</h1>
-            <p class="subheading">Identify DPDP and privacy gaps on client websites before formal audits — reduce manual review and improve audit readiness.</p>
-            <p class="urgency">Most DPDP audits fail on basic public-facing gaps that can be identified before formal engagement.</p>
-            <p class="disclaimer">Built to assist auditors and consultants.<br>Not a replacement for legal or professional judgement.</p>
-            <a href="#request" class="cta-button">Request a Free Pre-Audit Scan</a>
-        </div>
-    </section>
+    <header>
+        <section class="hero">
+            <div class="container">
+                <h1>DPDP Pre-Audit Website Scanner for Compliance Professionals</h1>
+                <p class="subheading">Identify DPDP and privacy gaps on client websites before formal audits — reduce manual review and improve audit readiness.</p>
+                <p class="urgency">Most DPDP audits fail on basic public-facing gaps that can be identified before formal engagement.</p>
+                <p class="disclaimer">Built to assist auditors and consultants.<br>Not a replacement for legal or professional judgement.</p>
+                <p class="credibility">Built by practitioners working closely with DPDP and privacy audits.</p>
+                <a href="#request" class="cta-button">Request a Free Pre-Audit Scan</a>
+            </div>
+        </section>
+    </header>
 
-    <section>
-        <div class="container">
-            <h2>Who is this for?</h2>
-            <div class="two-column">
-                <div>
-                    <h3>Designed for</h3>
-                    <ul>
-                        <li>DPDP & privacy auditors</li>
-                        <li>Compliance and risk consultants</li>
-                        <li>Boutique audit firms and solo practitioners</li>
-                        <li>Legal-tech and data protection advisors</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Not designed for</h3>
-                    <ul>
-                        <li>End-users or consumers</li>
-                        <li>Developers looking for CI/CD checks</li>
-                        <li>"One-click compliance" or certification use cases</li>
-                    </ul>
+    <main>
+        <section>
+            <div class="container">
+                <h2>Who is this for?</h2>
+                <div class="two-column">
+                    <div>
+                        <h3>Designed for</h3>
+                        <ul>
+                            <li>DPDP auditors and privacy auditors</li>
+                            <li>Compliance and risk consultants</li>
+                            <li>Boutique audit firms and solo practitioners</li>
+                            <li>Legal-tech and data protection advisors</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Not designed for</h3>
+                        <ul>
+                            <li>End-users or consumers</li>
+                            <li>Developers seeking CI/CD compliance checks</li>
+                            <li>Certification or "one-click compliance" use cases</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <div class="container">
-            <h2>The DPDP challenge today</h2>
-            <p>Manual website reviews are slow and repetitive. Junior reviewers miss obvious public-facing gaps. Evidence collection lacks consistency. Clients ask "are we compliant?" before audits begin.</p>
-            <ul>
-                <li>Manual website reviews are slow and repetitive</li>
-                <li>Junior reviewers miss obvious public-facing gaps</li>
-                <li>Evidence collection lacks consistency</li>
-                <li>Clients ask "are we compliant?" before audits begin</li>
-            </ul>
-            <p><em>Most of this work happens before professional judgement is applied.</em></p>
-        </div>
-    </section>
+        <section>
+            <div class="container">
+                <h2>The DPDP challenge today</h2>
+                <p>Manual DPDP website reviews are slow and repetitive. Junior reviewers often miss public-facing compliance gaps. Evidence collection lacks consistency across audits. Clients ask "are we DPDP compliant?" before audits begin.</p>
+                <ul>
+                    <li>Manual DPDP website reviews are slow and repetitive</li>
+                    <li>Junior reviewers often miss public-facing compliance gaps</li>
+                    <li>Evidence collection lacks consistency across audits</li>
+                    <li>Clients ask "are we DPDP compliant?" before audits begin</li>
+                </ul>
+                <p><em>Most of this work happens before professional judgement is applied.</em></p>
+            </div>
+        </section>
 
-    <section>
-        <div class="container">
-            <h2>What this scanner does (and does not)</h2>
-            <div class="bordered-section">
-                <div class="subsection">
-                    <h3>What it does</h3>
-                    <ul>
-                        <li>Reviews publicly accessible website elements</li>
-                        <li>Highlights DPDP-relevant data collection points</li>
-                        <li>Surfaces missing or weak disclosures</li>
-                        <li>Produces a structured, audit-friendly summary</li>
-                    </ul>
+        <section>
+            <div class="container">
+                <h2>What this scanner does (and does not)</h2>
+                <div class="bordered-section">
+                    <div class="subsection">
+                        <h3>What it does</h3>
+                        <ul>
+                            <li>Reviews publicly accessible website elements</li>
+                            <li>Highlights DPDP-relevant data collection points</li>
+                            <li>Surfaces missing or weak privacy disclosures</li>
+                            <li>Produces a structured, audit-friendly summary</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3>What it does NOT do</h3>
+                        <ul>
+                            <li>Declare DPDP compliance or non-compliance</li>
+                            <li>Replace legal or audit interpretation</li>
+                            <li>Certify DPDP readiness</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="subsection">
-                    <h3>What it does NOT do</h3>
-                    <ul>
-                        <li>Declare compliance or non-compliance</li>
-                        <li>Replace legal interpretation</li>
-                        <li>Certify DPDP readiness</li>
-                    </ul>
+                <p style="margin-top: 32px;">This is a pre-audit and audit-readiness tool, not an audit opinion.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>What you receive</h2>
+                <p>A short, structured DPDP pre-audit report covering:</p>
+                <ul>
+                    <li>Website overview and scope</li>
+                    <li>Public data collection touchpoints</li>
+                    <li>Privacy policy and disclosure observations</li>
+                    <li>Consent and cookie signals (where applicable)</li>
+                    <li>Obvious DPDP readiness gaps</li>
+                    <li>Items requiring auditor judgement</li>
+                </ul>
+                <p>Designed to be reusable across DPDP audit engagements and easy to explain to clients.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>How auditors typically use this</h2>
+                <ol>
+                    <li>Conduct a DPDP pre-audit readiness check</li>
+                    <li>Scope audit effort before quoting or planning</li>
+                    <li>Surface obvious website gaps early with clients</li>
+                    <li>Standardize junior-level DPDP website reviews</li>
+                </ol>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>How this fits into an audit workflow</h2>
+                <div class="workflow-container">
+                    <div class="workflow-step">
+                        <p>Auditor requests a pre-audit website review</p>
+                    </div>
+                    <div class="workflow-step">
+                        <p>Public website elements are reviewed for DPDP signals</p>
+                    </div>
+                    <div class="workflow-step">
+                        <p>Structured observations are generated</p>
+                    </div>
+                    <div class="workflow-step">
+                        <p>Auditor applies judgement and determines next steps</p>
+                    </div>
+                </div>
+                <p style="margin-top: 32px;"><em>Professional judgement remains central to the process.</em></p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="plainness-section">
+                    <h2>Why no animations, icons, or glossy visuals?</h2>
+                    <p>Because this is a pre-audit tool, not a sales pitch.</p>
+                    <p>We've optimized for professional safety, clear scope, and defensible boundaries — not visual excitement.</p>
                 </div>
             </div>
-            <p style="margin-top: 32px;">This is a pre-audit and readiness tool, not an audit opinion.</p>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <div class="container">
-            <h2>What you receive</h2>
-            <p>A short, structured pre-audit report covering:</p>
-            <ul>
-                <li>Website overview & scope</li>
-                <li>Public data collection touchpoints</li>
-                <li>Privacy policy & disclosure observations</li>
-                <li>Consent and cookie signals (where applicable)</li>
-                <li>Obvious DPDP readiness gaps</li>
-                <li>Items requiring auditor judgement</li>
-            </ul>
-            <p>Designed to be reusable across engagements and easy to explain to clients.</p>
-        </div>
-    </section>
-
-    <section>
-        <div class="container">
-            <h2>How auditors typically use this</h2>
-            <ol>
-                <li>Run a pre-audit readiness check before formal engagement</li>
-                <li>Scope DPDP effort prior to quoting or planning</li>
-                <li>Surface obvious gaps early with clients</li>
-                <li>Standardize junior-level website reviews</li>
-            </ol>
-        </div>
-    </section>
-
-    <section>
-        <div class="container">
-            <h2>How this fits into an audit workflow</h2>
-            <div class="workflow-container">
-                <div class="workflow-step">
-                    <p>Auditor requests a pre-audit scan</p>
-                </div>
-                <div class="workflow-step">
-                    <p>Public website elements are reviewed</p>
-                </div>
-                <div class="workflow-step">
-                    <p>Structured observations are generated</p>
-                </div>
-                <div class="workflow-step">
-                    <p>Auditor applies judgement and determines next steps</p>
-                </div>
+        <section>
+            <div class="container">
+                <h2>Why we're building this</h2>
+                <p>This is an early validation effort. Goal is to reduce repetitive audit prep. Improve consistency across DPDP engagements. Feedback from auditors directly shapes the tool.</p>
+                <p><strong>This is an early-access experiment, not a finished product.</strong></p>
             </div>
-            <p style="margin-top: 32px;"><em>Professional judgement remains central to the process.</em></p>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <div class="container">
-            <h2>Why we're building this</h2>
-            <p>This is an early validation effort. Goal is to reduce repetitive audit prep. Improve consistency across DPDP engagements. Feedback from auditors directly shapes the tool.</p>
-            <p><strong>This is an early-access experiment, not a finished product.</strong></p>
-        </div>
-    </section>
-
-    <section id="request">
-        <div class="container">
-            <h2>Pre-Audit Scan Request (No Obligation)</h2>
-            <p>Test this scanner on a real website and help us validate the approach.</p>
-            <form>
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Work Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="firm">Firm / Practice Name</label>
-                    <input type="text" id="firm" name="firm" required>
-                </div>
-                <div class="form-group">
-                    <label for="role">Role</label>
-                    <select id="role" name="role" required>
-                        <option value="">Select...</option>
-                        <option value="auditor">Auditor</option>
-                        <option value="consultant">Consultant</option>
-                        <option value="legal">Legal</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="website">Website URL (optional)</label>
-                    <input type="url" id="website" name="website" placeholder="https://example.com">
-                </div>
-                <div class="form-group">
-                    <label for="current-process">How are you currently handling DPDP readiness checks?</label>
-                    <textarea id="current-process" name="current-process"></textarea>
-                </div>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="feedback" name="feedback">
-                    <label for="feedback">I'm open to a short follow-up conversation to share feedback</label>
-                </div>
-                <button type="submit">Request Scan</button>
-                <p class="form-disclaimer">No automated compliance claims<br>No client contact<br>No data retained beyond this assessment</p>
-            </form>
-        </div>
-    </section>
+        <section id="request">
+            <div class="container">
+                <h2>Pre-Audit Scan Request (No Obligation)</h2>
+                <p>Test this scanner on a real website and help us validate the approach.</p>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Work Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="firm">Firm / Practice Name</label>
+                        <input type="text" id="firm" name="firm" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="role">Role</label>
+                        <select id="role" name="role" required>
+                            <option value="">Select...</option>
+                            <option value="auditor">Auditor</option>
+                            <option value="consultant">Consultant</option>
+                            <option value="legal">Legal</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="website">Website URL (optional)</label>
+                        <input type="url" id="website" name="website" placeholder="https://example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="current-process">How are you currently handling DPDP readiness checks?</label>
+                        <textarea id="current-process" name="current-process"></textarea>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="feedback" name="feedback">
+                        <label for="feedback">I'm open to a short follow-up conversation to share feedback</label>
+                    </div>
+                    <button type="submit">Request Scan</button>
+                    <p class="form-disclaimer">No automated compliance claims<br>No client contact<br>No data retained beyond this assessment<br>Initial response within 2–3 working days</p>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
             <p><strong>JuroCompliant × DPDP (early access)</strong></p>
-            <p>Built by practitioners exploring practical DPDP readiness workflows.</p>
+            <p>Built by practitioners exploring practical DPDP audit-readiness workflows.</p>
         </div>
     </footer>
 </body>
