@@ -625,7 +625,10 @@
             <div class="container">
                 <h2>Pre-Audit Review Request (No Obligation)</h2>
                 <p>Test this tool on a real website and help us validate the approach.</p>
-                <form>
+                <form action="https://formspree.io/f/mlgrdaee" method="POST">
+                    <input type="hidden" name="source" value="dpdp-preaudit-scanner">
+                    <input type="hidden" name="page_url" value="https://arshmakker.github.io/dpdp-preaudit-scanner/">
+                    <input type="hidden" name="_redirect" value="https://arshmakker.github.io/dpdp-preaudit-scanner/thanks.html">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" required>
@@ -654,10 +657,10 @@
                     </div>
                     <div class="form-group">
                         <label for="current-process">How are you currently handling DPDP readiness checks?</label>
-                        <textarea id="current-process" name="current-process"></textarea>
+                        <textarea id="current-process" name="current_process"></textarea>
                     </div>
                     <div class="checkbox-group">
-                        <input type="checkbox" id="feedback" name="feedback">
+                        <input type="checkbox" id="feedback" name="open_to_followup" value="yes">
                         <label for="feedback">I'm open to a short follow-up conversation to share feedback</label>
                     </div>
                     <button type="submit">Request Scan</button>
