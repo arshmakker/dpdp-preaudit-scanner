@@ -13,20 +13,20 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
+            line-height: 1.7;
             color: #333;
-            background-color: #fff;
+            background-color: #fafafa;
         }
 
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
 
         section {
-            padding: 60px 0;
-            border-bottom: 1px solid #e5e5e5;
+            padding: 80px 0;
+            border-bottom: 1px solid #e8e8e8;
         }
 
         section:last-of-type {
@@ -36,102 +36,165 @@
         h1 {
             font-size: 2rem;
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
             line-height: 1.3;
+            color: #1a1a1a;
         }
 
         h2 {
             font-size: 1.5rem;
             font-weight: 600;
-            margin-bottom: 24px;
-            color: #222;
+            margin-bottom: 32px;
+            color: #1a1a1a;
+        }
+
+        h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #1a1a1a;
         }
 
         p {
-            margin-bottom: 16px;
-            color: #555;
+            margin-bottom: 20px;
+            color: #4a4a4a;
         }
 
         .hero {
-            padding: 80px 0 60px;
+            padding: 100px 0 80px;
             text-align: center;
+            background-color: #fff;
         }
 
         .hero h1 {
             font-size: 2.25rem;
             max-width: 700px;
-            margin: 0 auto 24px;
+            margin: 0 auto 28px;
         }
 
         .hero .subheading {
             font-size: 1.125rem;
-            color: #444;
+            color: #4a4a4a;
             max-width: 650px;
-            margin: 0 auto 20px;
+            margin: 0 auto 24px;
+        }
+
+        .hero .urgency {
+            font-size: 1rem;
+            color: #2c3e50;
+            max-width: 650px;
+            margin: 0 auto 28px;
+            font-weight: 500;
         }
 
         .hero .disclaimer {
             font-size: 0.875rem;
-            color: #777;
+            color: #888;
             font-style: italic;
-            margin-top: 24px;
+            margin-top: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .cta-button {
             display: inline-block;
-            padding: 12px 32px;
-            background-color: #222;
+            padding: 14px 36px;
+            background-color: #2c3e50;
             color: #fff;
             text-decoration: none;
             border-radius: 4px;
             font-weight: 500;
-            margin-top: 32px;
+            margin-top: 40px;
             transition: background-color 0.2s;
         }
 
         .cta-button:hover {
-            background-color: #000;
+            background-color: #1a252f;
         }
 
         ul {
             margin-left: 24px;
-            margin-bottom: 24px;
+            margin-bottom: 32px;
+        }
+
+        ol {
+            margin-left: 24px;
+            margin-bottom: 32px;
         }
 
         li {
-            margin-bottom: 12px;
-            color: #555;
+            margin-bottom: 14px;
+            color: #4a4a4a;
         }
 
         .two-column {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-top: 24px;
-        }
-
-        .subsection {
-            margin-bottom: 32px;
-        }
-
-        .subsection h3 {
-            font-size: 1.125rem;
-            font-weight: 600;
-            margin-bottom: 16px;
-            color: #222;
-        }
-
-        form {
+            gap: 48px;
             margin-top: 32px;
         }
 
-        .form-group {
+        .subsection {
+            margin-bottom: 40px;
+        }
+
+        .bordered-section {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            padding: 32px;
+            margin-top: 32px;
+        }
+
+        .bordered-section .subsection {
+            margin-bottom: 32px;
+        }
+
+        .bordered-section .subsection:not(:last-child) {
+            padding-bottom: 32px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .workflow-steps {
+            margin-top: 32px;
+        }
+
+        .workflow-step {
             margin-bottom: 24px;
+            padding-left: 32px;
+            position: relative;
+        }
+
+        .workflow-step::before {
+            content: counter(step-counter);
+            counter-increment: step-counter;
+            position: absolute;
+            left: 0;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .workflow-container {
+            counter-reset: step-counter;
+        }
+
+        em {
+            font-style: italic;
+            color: #666;
+        }
+
+        form {
+            margin-top: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 28px;
         }
 
         label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             font-weight: 500;
             color: #333;
         }
@@ -142,11 +205,31 @@
         select,
         textarea {
             width: 100%;
-            padding: 10px 12px;
-            border: 1px solid #ddd;
+            padding: 12px 14px;
+            border: 1px solid #d0d0d0;
             border-radius: 4px;
             font-family: inherit;
             font-size: 1rem;
+            background-color: #fff;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 28px;
+        }
+
+        .checkbox-group label {
+            margin-bottom: 0;
+            font-weight: 400;
+            cursor: pointer;
         }
 
         textarea {
@@ -155,8 +238,8 @@
         }
 
         button[type="submit"] {
-            padding: 12px 32px;
-            background-color: #222;
+            padding: 14px 36px;
+            background-color: #2c3e50;
             color: #fff;
             border: none;
             border-radius: 4px;
@@ -167,22 +250,23 @@
         }
 
         button[type="submit"]:hover {
-            background-color: #000;
+            background-color: #1a252f;
         }
 
         .form-disclaimer {
             font-size: 0.875rem;
-            color: #777;
-            margin-top: 16px;
-            font-style: italic;
+            color: #888;
+            margin-top: 20px;
+            line-height: 1.6;
         }
 
         footer {
-            padding: 40px 0;
+            padding: 60px 0;
             text-align: center;
-            color: #777;
+            color: #888;
             font-size: 0.875rem;
-            border-top: 1px solid #e5e5e5;
+            border-top: 1px solid #e8e8e8;
+            background-color: #fff;
         }
 
         footer p {
@@ -198,6 +282,10 @@
                 font-size: 1rem;
             }
 
+            .hero .urgency {
+                font-size: 0.95rem;
+            }
+
             h1 {
                 font-size: 1.75rem;
             }
@@ -208,15 +296,19 @@
 
             .two-column {
                 grid-template-columns: 1fr;
-                gap: 32px;
+                gap: 40px;
             }
 
             section {
-                padding: 40px 0;
+                padding: 60px 0;
             }
 
             .hero {
-                padding: 60px 0 40px;
+                padding: 80px 0 60px;
+            }
+
+            .bordered-section {
+                padding: 24px;
             }
         }
     </style>
@@ -226,7 +318,8 @@
         <div class="container">
             <h1>DPDP Pre-Audit Website Scanner for Compliance Professionals</h1>
             <p class="subheading">Identify DPDP and privacy gaps on client websites before formal audits — reduce manual review and improve audit readiness.</p>
-            <p class="disclaimer">Built to assist auditors and consultants. Not a replacement for legal or professional judgement.</p>
+            <p class="urgency">Most DPDP audits fail on basic public-facing gaps that can be identified before formal engagement.</p>
+            <p class="disclaimer">Built to assist auditors and consultants.<br>Not a replacement for legal or professional judgement.</p>
             <a href="#request" class="cta-button">Request a Free Pre-Audit Scan</a>
         </div>
     </section>
@@ -236,7 +329,7 @@
             <h2>Who is this for?</h2>
             <div class="two-column">
                 <div>
-                    <h3>Designed for:</h3>
+                    <h3>Designed for</h3>
                     <ul>
                         <li>DPDP & privacy auditors</li>
                         <li>Compliance and risk consultants</li>
@@ -245,11 +338,11 @@
                     </ul>
                 </div>
                 <div>
-                    <h3>Not designed for:</h3>
+                    <h3>Not designed for</h3>
                     <ul>
                         <li>End-users or consumers</li>
                         <li>Developers looking for CI/CD checks</li>
-                        <li>"One-click compliance" use cases</li>
+                        <li>"One-click compliance" or certification use cases</li>
                     </ul>
                 </div>
             </div>
@@ -259,27 +352,27 @@
     <section>
         <div class="container">
             <h2>The DPDP challenge today</h2>
-            <p>Manual website reviews are slow and repetitive. Junior reviewers miss obvious public-facing gaps. Evidence collection is inconsistent. Clients ask "are we compliant?" before audits begin.</p>
+            <p>Manual website reviews are slow and repetitive. Junior reviewers miss obvious public-facing gaps. Evidence collection lacks consistency. Clients ask "are we compliant?" before audits begin.</p>
             <ul>
                 <li>Manual website reviews are slow and repetitive</li>
                 <li>Junior reviewers miss obvious public-facing gaps</li>
-                <li>Evidence collection is inconsistent</li>
+                <li>Evidence collection lacks consistency</li>
                 <li>Clients ask "are we compliant?" before audits begin</li>
             </ul>
-            <p>Most of this work happens before professional judgement is applied.</p>
+            <p><em>Most of this work happens before professional judgement is applied.</em></p>
         </div>
     </section>
 
     <section>
         <div class="container">
             <h2>What this scanner does (and does not)</h2>
-            <div class="two-column">
+            <div class="bordered-section">
                 <div class="subsection">
                     <h3>What it does</h3>
                     <ul>
-                        <li>Scans public websites for DPDP & privacy red flags</li>
-                        <li>Identifies data collection points and consent signals</li>
-                        <li>Highlights missing or weak disclosures</li>
+                        <li>Reviews publicly accessible website elements</li>
+                        <li>Highlights DPDP-relevant data collection points</li>
+                        <li>Surfaces missing or weak disclosures</li>
                         <li>Produces a structured, audit-friendly summary</li>
                     </ul>
                 </div>
@@ -292,17 +385,17 @@
                     </ul>
                 </div>
             </div>
-            <p style="margin-top: 24px;">This is a pre-audit and readiness tool, not an audit opinion.</p>
+            <p style="margin-top: 32px;">This is a pre-audit and readiness tool, not an audit opinion.</p>
         </div>
     </section>
 
     <section>
         <div class="container">
             <h2>What you receive</h2>
-            <p>A short, structured report covering:</p>
+            <p>A short, structured pre-audit report covering:</p>
             <ul>
                 <li>Website overview & scope</li>
-                <li>Data collection touchpoints identified</li>
+                <li>Public data collection touchpoints</li>
                 <li>Privacy policy & disclosure observations</li>
                 <li>Consent and cookie signals (where applicable)</li>
                 <li>Obvious DPDP readiness gaps</li>
@@ -314,15 +407,48 @@
 
     <section>
         <div class="container">
+            <h2>How auditors typically use this</h2>
+            <ol>
+                <li>Run a pre-audit readiness check before formal engagement</li>
+                <li>Scope DPDP effort prior to quoting or planning</li>
+                <li>Surface obvious gaps early with clients</li>
+                <li>Standardize junior-level website reviews</li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>How this fits into an audit workflow</h2>
+            <div class="workflow-container">
+                <div class="workflow-step">
+                    <p>Auditor requests a pre-audit scan</p>
+                </div>
+                <div class="workflow-step">
+                    <p>Public website elements are reviewed</p>
+                </div>
+                <div class="workflow-step">
+                    <p>Structured observations are generated</p>
+                </div>
+                <div class="workflow-step">
+                    <p>Auditor applies judgement and determines next steps</p>
+                </div>
+            </div>
+            <p style="margin-top: 32px;"><em>Professional judgement remains central to the process.</em></p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
             <h2>Why we're building this</h2>
-            <p>This is an early validation effort. Goal is to reduce repetitive audit prep. Improve consistency across DPDP engagements. Feedback from auditors will shape the product.</p>
-            <p><strong>This is an early access experiment, not a finished product.</strong></p>
+            <p>This is an early validation effort. Goal is to reduce repetitive audit prep. Improve consistency across DPDP engagements. Feedback from auditors directly shapes the tool.</p>
+            <p><strong>This is an early-access experiment, not a finished product.</strong></p>
         </div>
     </section>
 
     <section id="request">
         <div class="container">
-            <h2>Request a free pre-audit scan</h2>
+            <h2>Pre-Audit Scan Request (No Obligation)</h2>
             <p>Test this scanner on a real website and help us validate the approach.</p>
             <form>
                 <div class="form-group">
@@ -355,8 +481,12 @@
                     <label for="current-process">How are you currently handling DPDP readiness checks?</label>
                     <textarea id="current-process" name="current-process"></textarea>
                 </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="feedback" name="feedback">
+                    <label for="feedback">I'm open to a short follow-up conversation to share feedback</label>
+                </div>
                 <button type="submit">Request Scan</button>
-                <p class="form-disclaimer">No automated compliance claims. No data stored beyond this assessment.</p>
+                <p class="form-disclaimer">No automated compliance claims<br>No client contact<br>No data retained beyond this assessment</p>
             </form>
         </div>
     </section>
@@ -364,9 +494,8 @@
     <footer>
         <div class="container">
             <p><strong>JuroCompliant × DPDP (early access)</strong></p>
-            <p>Built for compliance professionals exploring DPDP readiness workflows.</p>
+            <p>Built by practitioners exploring practical DPDP readiness workflows.</p>
         </div>
     </footer>
 </body>
 </html>
-
