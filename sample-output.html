@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DPDP Website Pre-Audit Sanity Review — Sample Output</title>
+    <meta name="robots" content="noindex">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #fff;
+            color: #1F2937;
+            line-height: 1.6;
+            padding: 40px 24px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header-actions {
+            text-align: right;
+            margin-bottom: 32px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #1F2937;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+        }
+
+        .download-btn:hover {
+            background: #111827;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #111827;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #6B7280;
+            margin-bottom: 16px;
+        }
+
+        .meta-note {
+            font-size: 0.875rem;
+            color: #6B7280;
+            font-style: italic;
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 48px;
+            margin-bottom: 16px;
+            color: #111827;
+            page-break-after: avoid;
+        }
+
+        h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            color: #1F2937;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #1F2937;
+        }
+
+        ul, ol {
+            margin-left: 24px;
+            margin-bottom: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #1F2937;
+        }
+
+        .divider {
+            height: 1px;
+            background: #E5E7EB;
+            margin: 32px 0;
+        }
+
+        em {
+            font-style: italic;
+            color: #4B5563;
+        }
+
+        @media print {
+            body {
+                padding: 20px;
+            }
+
+            .header-actions {
+                display: none;
+            }
+
+            h2 {
+                page-break-before: always;
+                margin-top: 24px;
+            }
+
+            h2:first-of-type {
+                page-break-before: auto;
+            }
+
+            .divider {
+                page-break-after: avoid;
+            }
+
+            ul, ol {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-actions">
+        <button class="download-btn" onclick="window.print()">Download as PDF</button>
+    </div>
+
+    <h1>DPDP Website Pre-Audit Sanity Review</h1>
+    <p class="subtitle">Illustrative sample output — not a compliance opinion</p>
+    <p class="meta-note">This document demonstrates format and scope only. It does not constitute certification, legal advice, or a compliance determination.</p>
+
+    <div class="divider"></div>
+
+    <h2>Scope and Boundary Statement</h2>
+    <p>This review is limited to publicly accessible website surfaces only. It examines visible elements, public-facing disclosures, and observable data collection mechanisms.</p>
+    
+    <p><strong>Explicitly out of scope:</strong></p>
+    <ul>
+        <li>Backend data processing and storage systems</li>
+        <li>Retention and deletion enforcement mechanisms</li>
+        <li>Consent logs and audit trails</li>
+        <li>Security controls and access management</li>
+        <li>Cross-border data transfer arrangements</li>
+        <li>Compliance certification or attestation</li>
+        <li>Legal opinion or enforcement risk assessment</li>
+    </ul>
+    
+    <p><em>This document supports early audit readiness only.</em></p>
+
+    <div class="divider"></div>
+
+    <h2>Website Overview</h2>
+    <p><strong>Website reviewed:</strong> example.com</p>
+    <p><strong>Review type:</strong> Pre-audit sanity check</p>
+    <p><strong>Regulatory context:</strong> India — DPDP Act</p>
+    <p><strong>Nature of review:</strong> Manual, illustrative examination of public-facing elements</p>
+    <p><strong>Date of review:</strong> [Illustrative]</p>
+
+    <div class="divider"></div>
+
+    <h2>Observed Public Data Collection Points</h2>
+    <p>The following data collection mechanisms were observed on public website surfaces:</p>
+    <ul>
+        <li>Contact / inquiry forms (name, email, message fields)</li>
+        <li>Newsletter subscription forms (if applicable)</li>
+        <li>Third-party scripts or trackers (analytics, advertising pixels)</li>
+        <li>Email-based contact links</li>
+        <li>Cookie banners or consent mechanisms (where visible)</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>High-Level DPDP Observations (Illustrative)</h2>
+    
+    <h3>Disclosure and Transparency</h3>
+    <p>Privacy policy presence and discoverability were noted. The policy's alignment with DPDP requirements, clarity of language, and accessibility from key user touchpoints were assessed at a high level.</p>
+    <p>Observations may include visibility of data processing purposes, data categories collected, and retention periods (where disclosed).</p>
+
+    <h3>Consent and Notices</h3>
+    <p>Visible consent mechanisms, cookie notices, and opt-in/opt-out controls were reviewed for prominence and clarity. The review notes whether consent appears to be obtained before data collection begins.</p>
+    <p>This assessment is limited to what is observable on public surfaces and does not verify backend consent logging or enforcement.</p>
+
+    <h3>Grievance and Contact Visibility</h3>
+    <p>The discoverability of grievance officer contact information, data subject rights mechanisms, and complaint procedures were examined. This includes whether contact details are easily accessible and whether the process for exercising rights is clearly explained.</p>
+    <p>Note: This review does not verify response times or actual grievance handling processes.</p>
+
+    <div class="divider"></div>
+
+    <h2>Items Typically Requiring Auditor Judgement</h2>
+    <p>The following areas typically require professional auditor judgement and deeper investigation:</p>
+    <ul>
+        <li>Adequacy of consent mechanisms relative to DPDP requirements</li>
+        <li>Completeness of privacy disclosures for all data processing activities</li>
+        <li>Alignment of public-facing statements with actual data practices</li>
+        <li>Effectiveness of grievance redressal mechanisms</li>
+        <li>Compliance with data minimization and purpose limitation principles</li>
+        <li>Cross-border transfer compliance (if applicable)</li>
+    </ul>
+    <p><em>This pre-audit review does not draw conclusions on these items. Professional judgement remains essential.</em></p>
+
+    <div class="divider"></div>
+
+    <h2>Summary for Audit Scoping</h2>
+    <p>This illustrative review highlights observable public-facing elements that may require deeper examination during formal audit scoping. It helps auditors identify obvious gaps early and plan audit effort accordingly.</p>
+    <p>No compliance conclusion is drawn from this review. It serves as a preliminary assessment tool to inform audit planning and client discussions.</p>
+    <p>The scope and limitations of this review should be clearly communicated to stakeholders to avoid misinterpretation.</p>
+
+    <div class="divider"></div>
+
+    <h2>Closing Note</h2>
+    <p>This document is illustrative and non-binding. It demonstrates the format and scope of a pre-audit sanity review only.</p>
+    <p>It does not constitute:</p>
+    <ul>
+        <li>A compliance certification</li>
+        <li>Legal advice</li>
+        <li>An audit opinion</li>
+        <li>A determination of DPDP compliance status</li>
+    </ul>
+    <p>Professional auditor judgement and formal audit procedures remain necessary for compliance assessment.</p>
+</body>
+</html>
+
