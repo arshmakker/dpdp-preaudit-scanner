@@ -426,10 +426,9 @@
         }
     </style>
     <!-- Privacy-friendly analytics by Plausible -->
-    <script async src="https://plausible.io/js/pa-hxtGGCifoQ7fL80lnetaE.js"></script>
+    <script defer src="https://plausible.io/js/pa-hxtGGCifoQ7fL80lnetaE.js"></script>
     <script>
-      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-      plausible.init()
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)};
     </script>
 </head>
 <body>
@@ -532,7 +531,7 @@
                     <li>Clear out-of-scope boundaries (no certification, no legal opinion)</li>
                 </ul>
                 <p>Delivered as a short, auditor-friendly written summary.</p>
-                <p style="margin-top: 24px; font-size: 0.9375rem; color: #6B7280;"><a href="/sample-output.html" style="color: #6B7280; text-decoration: underline;">View an illustrative sample of a DPDP pre-audit sanity review (PDF-ready).</a></p>
+                <p style="margin-top: 24px; font-size: 0.9375rem; color: #6B7280;"><a href="/sample-output.html" onclick="plausible('view_sample_output');" style="color: #6B7280; text-decoration: underline;">View an illustrative sample of a DPDP pre-audit sanity review (PDF-ready).</a></p>
             </div>
         </section>
 
@@ -583,7 +582,7 @@
                 <h2>Request a pre-audit sanity review</h2>
                 <p>Share a website URL and basic context. We'll review the public surface and respond with next steps.</p>
                 <p>(No obligation. No automated scanning.)</p>
-                <form action="https://formspree.io/f/mlgrdaee?redirect=https://arshmakker.github.io/dpdp-preaudit-scanner/thanks.html" method="POST">
+                <form id="request-form" action="https://formspree.io/f/mlgrdaee?redirect=https://arshmakker.github.io/dpdp-preaudit-scanner/thanks.html" method="POST">
                     <input type="hidden" name="source" value="dpdp-preaudit-scanner">
                     <input type="hidden" name="page_url" value="https://arshmakker.github.io/dpdp-preaudit-scanner/">
                     <input type="hidden" name="_next" value="https://arshmakker.github.io/dpdp-preaudit-scanner/thanks.html">
@@ -636,5 +635,38 @@
             <p>Early access, practitioner-led</p>
         </div>
     </footer>
+    <script>
+        // Track form view with IntersectionObserver
+        (function() {
+            var formViewed = false;
+            var form = document.getElementById('request-form');
+            if (form && window.IntersectionObserver) {
+                var observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting && !formViewed) {
+                            formViewed = true;
+                            if (window.plausible) {
+                                plausible('form_viewed');
+                            }
+                            observer.disconnect();
+                        }
+                    });
+                }, { threshold: 0.1 });
+                observer.observe(form);
+            }
+        })();
+
+        // Track form submission
+        (function() {
+            var form = document.getElementById('request-form');
+            if (form) {
+                form.addEventListener('submit', function() {
+                    if (window.plausible) {
+                        plausible('form_submitted');
+                    }
+                });
+            }
+        })();
+    </script>
 </body>
 </html>
