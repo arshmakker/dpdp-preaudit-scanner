@@ -117,6 +117,23 @@
             line-height: 1.4;
         }
 
+        .hero .secondary-cta {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #6B7280;
+            margin-top: 12px;
+            display: block;
+        }
+
+        .hero .secondary-cta a {
+            color: #6B7280;
+            text-decoration: underline;
+        }
+
+        .hero .secondary-cta a:hover {
+            color: #4B5563;
+        }
+
         .cta-button {
             display: inline-block;
             padding: 16px 40px;
@@ -446,9 +463,26 @@
         <section class="hero">
             <div class="container">
                 <h1>A DPDP website sanity check — before formal audits</h1>
-                <a href="#request" class="cta-button">Request a pre-audit sanity review</a>
+                <a href="#free-check" class="cta-button">Run a Free DPDP Website Check (5 mins)</a>
+                <p class="secondary-cta">Or <a href="#request">request an auditor-ready DPDP memo →</a></p>
                 <p class="subheading">For auditors and compliance consultants who want to surface obvious DPDP gaps early, without automation, certification, or legal opinion.</p>
                 <p class="disclaimer">Manual. Illustrative. Limited to public website surfaces.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="bordered-section">
+                    <h2>What the free DPDP website check looks for</h2>
+                    <ul>
+                        <li>Presence of DPDP-required disclosures on public pages</li>
+                        <li>Visibility of grievance officer / contact information</li>
+                        <li>Obvious consent and notice gaps</li>
+                        <li>Public data collection points (forms, cookies, trackers)</li>
+                        <li>Red flags auditors commonly surface late during audits</li>
+                    </ul>
+                    <a href="#free-check" class="cta-button" style="margin-top: 20px; display: inline-block;">Run Free Check</a>
+                </div>
             </div>
         </section>
 
@@ -578,13 +612,42 @@
             </div>
         </section>
 
+        <section id="free-check">
+            <div class="container">
+                <h2>Get your free DPDP website check</h2>
+                <p>Enter your details below. We'll review your website's public surfaces and send you a brief summary of obvious DPDP gaps.</p>
+                <form id="free-check-form" action="https://formspree.io/f/mlgrdaee" method="POST">
+                    <input type="hidden" name="source" value="dpdp-free-check">
+                    <input type="hidden" name="form_type" value="free_check">
+                    <input type="hidden" name="page_url" value="https://arshmakker.github.io/dpdp-preaudit-scanner/">
+                    <input type="hidden" name="_next" value="https://arshmakker.github.io/dpdp-preaudit-scanner/thanks.html">
+                    <input type="hidden" name="_redirect" value="https://arshmakker.github.io/dpdp-preaudit-scanner/thanks.html">
+                    <div class="form-group">
+                        <label for="free-email">Work Email</label>
+                        <input type="email" id="free-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="free-company">Company / Firm Name</label>
+                        <input type="text" id="free-company" name="firm" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="free-website">Website URL</label>
+                        <input type="url" id="free-website" name="website" placeholder="https://example.com" required>
+                    </div>
+                    <button type="submit">Get Free DPDP Website Check</button>
+                    <p class="form-disclaimer">Free check. No commitment. Results in 2–3 working days.</p>
+                </form>
+            </div>
+        </section>
+
         <section id="request">
             <div class="container">
-                <h2>Request a pre-audit sanity review</h2>
-                <p>Share a website URL and basic context. We'll review the public surface and respond with next steps.</p>
+                <h2>Request an auditor-ready DPDP memo</h2>
+                <p>For auditors and compliance consultants who need a formal, detailed pre-audit review. Share a website URL and basic context. We'll review the public surface and respond with next steps.</p>
                 <p>(No obligation. No automated scanning.)</p>
                 <form id="request-form" action="https://formspree.io/f/mlgrdaee?redirect=https://arshmakker.github.io/dpdp-preaudit-scanner/thanks.html" method="POST">
                     <input type="hidden" name="source" value="dpdp-preaudit-scanner">
+                    <input type="hidden" name="form_type" value="audit_request">
                     <input type="hidden" name="page_url" value="https://arshmakker.github.io/dpdp-preaudit-scanner/">
                     <input type="hidden" name="_next" value="https://arshmakker.github.io/dpdp-preaudit-scanner/thanks.html">
                     <input type="hidden" name="_redirect" value="https://arshmakker.github.io/dpdp-preaudit-scanner/thanks.html">
@@ -637,7 +700,39 @@
         </div>
     </footer>
     <script>
-        // Track form view with IntersectionObserver
+        // Track form view with IntersectionObserver (free check form)
+        (function() {
+            var freeFormViewed = false;
+            var freeForm = document.getElementById('free-check-form');
+            if (freeForm && window.IntersectionObserver) {
+                var observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting && !freeFormViewed) {
+                            freeFormViewed = true;
+                            if (window.plausible) {
+                                plausible('free_check_form_viewed');
+                            }
+                            observer.disconnect();
+                        }
+                    });
+                }, { threshold: 0.1 });
+                observer.observe(freeForm);
+            }
+        })();
+
+        // Track free check form submission
+        (function() {
+            var freeForm = document.getElementById('free-check-form');
+            if (freeForm) {
+                freeForm.addEventListener('submit', function() {
+                    if (window.plausible) {
+                        plausible('free_check_submitted');
+                    }
+                });
+            }
+        })();
+
+        // Track form view with IntersectionObserver (audit request form)
         (function() {
             var formViewed = false;
             var form = document.getElementById('request-form');
@@ -657,7 +752,7 @@
             }
         })();
 
-        // Track form submission
+        // Track form submission (audit request form)
         (function() {
             var form = document.getElementById('request-form');
             if (form) {
